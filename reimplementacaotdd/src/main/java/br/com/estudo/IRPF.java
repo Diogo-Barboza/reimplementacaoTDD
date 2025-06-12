@@ -5,6 +5,8 @@ public class IRPF {
     private float salario;
     private float contribuicaoPrevidenciaria;
     private String[] dependentes;
+    private float pensao;
+    private float outraDeducao;
 
     public IRPF(){
         dependentes = new String[0];
@@ -42,4 +44,21 @@ public class IRPF {
     public float getDeducaoDependentes(){
         return dependentes.length * 189.59f;
     }
+
+    public void cadastrarPensaoAlimenticia(float pensao) {
+        this.pensao += pensao;
+    }
+
+    public float getPensaoAlimenticia(){
+        return pensao;
+    }
+
+    public void cadastrarOutrasDeducoes(float outraDeducao) {
+        this.outraDeducao += outraDeducao;
+    }
+
+    public float getTotalOutrasDeducoes(){
+        return outraDeducao;
+    }
+
 }

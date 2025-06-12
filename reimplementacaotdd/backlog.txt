@@ -1,0 +1,13 @@
+- Cadastrar rendimentos
+- Calcular total rendimentos
+
+- Cadastrar Deduções
+    - Previdencia Oficial OK
+    - Dependentes OK
+    - Pensão Alimenticia OK
+    - Outras Deduções OK
+
+- Calcular base de calculo
+- Cacluclar imposto de renda por faixas
+- Caclular Alíquiota Efetiva
+
