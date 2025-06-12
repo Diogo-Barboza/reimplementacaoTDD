@@ -61,4 +61,10 @@ public class IRPF {
         return outraDeducao;
     }
 
+    public float getTotalDeducoes() {
+        float total = 0;
+        total += outraDeducao + pensao + (dependentes.length * 189.59) + contribuicaoPrevidenciaria;
+        return total;
+    }
+
 }
