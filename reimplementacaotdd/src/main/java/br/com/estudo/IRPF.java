@@ -73,4 +73,40 @@ public class IRPF {
         return baseCalculo;
     }
 
+    public float getImpostoPorFaixa() {
+        float baseCalculo = getBaseDeCaculo();
+        float soma = 0;
+        
+        if ( baseCalculo <= 900) return baseCalculo;
+        else if ( baseCalculo <= 1800 ){
+            baseCalculo -= 900;
+            return (baseCalculo * 0.075f);
+        }
+        else if ( baseCalculo > 1800 && baseCalculo <= 2800){
+            soma = 67.5f;
+            baseCalculo -= 1900;
+            soma += (baseCalculo * 0.15f);
+            return soma;
+        }
+        else if ( baseCalculo > 2800 && baseCalculo <= 3800 ) {
+            soma = 217.5f;
+            baseCalculo -= 2900;
+            soma += (baseCalculo * 0.225);
+            return soma;
+        }
+        else{
+            soma = 442.5f;
+            baseCalculo -= 3900;
+            soma += (baseCalculo * 0.275);
+            return soma;
+        }
+
+    }
+
+
+    // - 1 faixa até 900 = 0%
+    // - 2 faixa 900 ate 1800 (900) = 7,5%
+    // - 3 faixa 1800 ate 2800 (1000) = 15%
+    // - 4 faixa 2800 ate 3800 (1000) = 22,5%
+    // - 5 faixa acima de 3800 = 27,5%
 }

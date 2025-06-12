@@ -9,7 +9,13 @@
 
 - Calcular base de calculo OK
 
-- Cacluclar imposto de renda por faixas
+- Cacluclar imposto de renda por faixas OK
+    - 1 faixa até 900 = 0%
+    - 2 faixa 900 ate 1800 (900) = 7,5%
+    - 3 faixa 1800 ate 2800 (1000) = 15%
+    - 4 faixa 2800 ate 3800 (1000) = 22,5%
+    - 5 faixa acima de 3800 = 27,5%
+
 
 - Caclular Alíquiota Efetiva
 
