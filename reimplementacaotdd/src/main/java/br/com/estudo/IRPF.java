@@ -7,6 +7,7 @@ public class IRPF {
     private String[] dependentes;
     private float pensao;
     private float outraDeducao;
+    private float baseCalculo;
 
     public IRPF(){
         dependentes = new String[0];
@@ -65,6 +66,11 @@ public class IRPF {
         float total = 0;
         total += outraDeducao + pensao + (dependentes.length * 189.59) + contribuicaoPrevidenciaria;
         return total;
+    }
+
+    public float getBaseDeCaculo() {
+        baseCalculo = getTotalSalario() - getTotalDeducoes();
+        return baseCalculo;
     }
 
 }
