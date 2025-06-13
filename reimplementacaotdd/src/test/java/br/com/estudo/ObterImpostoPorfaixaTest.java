@@ -18,7 +18,7 @@ public class ObterImpostoPorfaixaTest {
     public void testObterImposto(){
         irpf.cadastrarSalario(900f);
         
-        assertEquals(irpf.getBaseDeCaculo(), irpf.getImpostoPorFaixa(), 0);
+        assertEquals(0f, irpf.getImpostoPorFaixa(), 0);
     }
 
     @Test

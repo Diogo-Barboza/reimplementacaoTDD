@@ -77,7 +77,7 @@ public class IRPF {
         float baseCalculo = getBaseDeCaculo();
         float soma = 0;
         
-        if ( baseCalculo <= 900) return baseCalculo;
+        if ( baseCalculo <= 900) return 0f;
         else if ( baseCalculo <= 1800 ){
             baseCalculo -= 900;
             return (baseCalculo * 0.075f);
@@ -103,10 +103,11 @@ public class IRPF {
 
     }
 
+    public float getAliquotaFinal() {
+        float salario = getTotalSalario();
+        float imposto = getImpostoPorFaixa();
 
-    // - 1 faixa até 900 = 0%
-    // - 2 faixa 900 ate 1800 (900) = 7,5%
-    // - 3 faixa 1800 ate 2800 (1000) = 15%
-    // - 4 faixa 2800 ate 3800 (1000) = 22,5%
-    // - 5 faixa acima de 3800 = 27,5%
+        return (imposto/salario) * 100;
+    }
+
 }

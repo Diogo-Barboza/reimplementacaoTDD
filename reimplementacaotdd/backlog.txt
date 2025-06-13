@@ -17,5 +17,6 @@
     - 5 faixa acima de 3800 = 27,5%
 
 
-- Caclular Alíquiota Efetiva
+- Caclular Alíquiota Efetiva OK
 
+FINALIZADO!!!!
